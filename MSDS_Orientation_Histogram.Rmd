@@ -1,0 +1,21 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r}
+#file.choose()
+d <- read.csv("/Users/michaelvaden/Downloads/archive (16)/comedy_series.csv")
+
+#View(d)
+```
+
+```{r}
+library(ggplot2)
+ggplot(d, aes(x=Rating)) + geom_histogram(binwidth = .1, color = "black", fill = "lightblue") + labs(title = "Average Ratings of IMDb Comedy Series and Movies")
+```
+
+
+
